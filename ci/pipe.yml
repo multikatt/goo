@@ -1,0 +1,14 @@
+resources:
+- name: newest
+  type: git
+  source:
+    uri: https://github.com/multikatt/goo.git
+    branch: master
+
+jobs:
+- name: newest
+  plan:
+  - get: newest
+    trigger: true
+  - task: tests
+    file: newest/build.yml

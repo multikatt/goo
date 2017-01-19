@@ -1,0 +1,13 @@
+platform: linux
+
+image_resource:
+  type: docker-image
+  source:
+    repository: python
+    tag: 2.7.12
+
+inputs:
+- name: newest
+
+run:
+  path: ./newest/ci/test.sh
