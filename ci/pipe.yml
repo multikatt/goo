@@ -2,8 +2,9 @@ resources:
 - name: newest
   type: git
   source:
-    uri: https://github.com/multikatt/goo.git
+    uri: git@gitlab.com:multikatt/newest.git
     branch: master
+    private_key: {{ssh_key}}
 
 jobs:
 - name: newest
